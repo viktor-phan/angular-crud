@@ -20,11 +20,7 @@ export class ProductsComponent implements OnInit {
       this.products = res;
     });
   }
-  insertData() {
-    this.dataService.insertData(this.product).subscribe((res) => {
-      this.getProductsData();
-    });
-  }
+  
   deleteData(id: any) {
     this.dataService.deleteData(id).subscribe((res) => {
       alert('Deleted Product id: ' + id);
